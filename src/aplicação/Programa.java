@@ -1,14 +1,13 @@
 package aplicação;
 
-import tabuleiro.Posição;
+import tabuleiro.Borda;
 
 public class Programa {
 
 	public static void main(String[] args) {
 		
-		Posição p = new Posição(3,5);
+		Borda borda = new Borda(8,8);
 		
-		System.out.println(p);
 	}
 	
   
