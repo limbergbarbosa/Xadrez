@@ -1,13 +1,15 @@
 package aplicação;
 
-import tabuleiro.Borda;
+import chess.PartidaXadrez;
 
 public class Programa {
 
 	public static void main(String[] args) {
 		
-		Borda borda = new Borda(8,8);
+
+		PartidaXadrez partidaXadrez = new PartidaXadrez();
 		
+		IU.printBorda(partidaXadrez.getPeças());
 	}
 	
   
