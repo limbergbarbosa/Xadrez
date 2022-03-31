@@ -1,25 +1,37 @@
 package chess;
 
-import tabuleiro.Borda;
+import chess.peça.Rei;
+import chess.peça.Torre;
+import tabuleiro.Posição;
+import tabuleiro.Tabuleiro;
 
 public class PartidaXadrez {
 
-	private Borda borda;
+	private Tabuleiro t;
 
 	public PartidaXadrez() {
 
-		borda = new Borda(8, 8);
+		t = new Tabuleiro(8, 8);
+		iniciarPartida();
 	}
 
 	public PeçaXadrez[][] getPeças() {
 
-		PeçaXadrez[][] mat = new PeçaXadrez[borda.getLinhas()][borda.getColunas()];
+		PeçaXadrez[][] mat = new PeçaXadrez[t.getLinhas()][t.getColunas()];
 
-		for (int i = 0; i < borda.getLinhas(); i++) {
-			for (int j = 0; j < borda.getColunas(); j++) {
-				mat[i][j] = (PeçaXadrez) borda.peça(i, j);
+		for (int i = 0; i < t.getLinhas(); i++) {
+			for (int j = 0; j < t.getColunas(); j++) {
+				mat[i][j] = (PeçaXadrez) t.peça(i, j);
 			}
 		}
 		return mat;
+	}
+	private void iniciarPartida() {
+		
+		t.ColocarPeça(new Torre(t,Color.BRANCO), new Posição(2, 1));
+		t.ColocarPeça(new Rei(t, Color.NEGRO), new Posição(0, 4));
+		t.ColocarPeça(new Rei(t, Color.BRANCO), new Posição(7, 4));
+
+		
 	}
 }

@@ -14,7 +14,7 @@ public class IU {
 			System.out.println();
 
 		}
-		System.out.println("    a  b  c  d  e  f  g  h");
+		System.out.print("    a  b  c  d  e  f  g  h");
 	}
 
 	private static void printPeça(PeçaXadrez peça) {
@@ -25,7 +25,7 @@ public class IU {
 
 		} else {
 
-			System.out.println(peça);
+			System.out.print(peça);
 		}
 	}
 }

@@ -1,12 +1,12 @@
 package tabuleiro;
 
-public class Borda {
+public class Tabuleiro {
 
 	private int linhas;
 	private int colunas;
 	private Peça[][] peças;
 
-	public Borda(int linhas, int colunas) {
+	public Tabuleiro(int linhas, int colunas) {
 		this.linhas = linhas;
 		this.colunas = colunas;
 		peças = new Peça[linhas][colunas];
@@ -35,6 +35,12 @@ public class Borda {
 	public Peça peça(Posição p) {
 
 		return peças[p.getLinha()][p.getColuna()];
+	}
+
+	public void ColocarPeça(Peça peça, Posição p) {
+
+		peças[p.getLinha()][p.getColuna()] = peça;
+		peça.posicao = p;
 	}
 
 }

@@ -1,13 +1,13 @@
 package chess;
 
-import tabuleiro.Borda;
+import tabuleiro.Tabuleiro;
 import tabuleiro.Peça;
 
 public class PeçaXadrez extends Peça {
 
 	private Color color;
 
-	public PeçaXadrez(Borda borda, Color color) {
+	public PeçaXadrez(Tabuleiro borda, Color color) {
 		super(borda);
 		this.color = color;
 	}
