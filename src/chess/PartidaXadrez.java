@@ -29,7 +29,7 @@ public class PartidaXadrez {
 	private void iniciarPartida() {
 		
 		t.ColocarPeça(new Torre(t,Color.BRANCO), new Posição(2, 1));
-		t.ColocarPeça(new Rei(t, Color.NEGRO), new Posição(0, 4));
+		t.ColocarPeça(new Rei(t, Color.NEGRO), new Posição(2, 4));
 		t.ColocarPeça(new Rei(t, Color.BRANCO), new Posição(7, 4));
 
 		
